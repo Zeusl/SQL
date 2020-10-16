@@ -39,8 +39,8 @@ LIMIT 제한할갯수;
 
 ```
 SELECT
-A.NAME, --A테이블의 NAME조회
-B.AGE --B테이블의 AGE조회
+      A.NAME, --A테이블의 NAME조회
+      B.AGE --B테이블의 AGE조회
 FROM EX_TABLE A
 INNER JOIN JOIN_TABLE B ON A.NO_EMP = B.NO_EMP AND A.DEPT = B.DEPT;
 ```
@@ -52,8 +52,8 @@ INNER JOIN JOIN_TABLE B ON A.NO_EMP = B.NO_EMP AND A.DEPT = B.DEPT;
 
 ```
 SELECT
-A.NAME, --A테이블의 NAME조회
-B.AGE --B테이블의 AGE조회
+      A.NAME, --A테이블의 NAME조회
+      B.AGE --B테이블의 AGE조회
 FROM EX_TABLE A --기준 테이블 별칭
 LEFT OUTER JOIN JOIN_TABLE B ON A.NO_EMP = B.NO_EMP AND A.DEPT = B.DEPT;  --LEFT OUTER JOIN 조인테이블 별칭 ON 기준테이블별칭.기준키 = 조인테이블별칭.기준키 ...
 
@@ -65,8 +65,8 @@ LEFT OUTER JOIN JOIN_TABLE B ON A.NO_EMP = B.NO_EMP AND A.DEPT = B.DEPT;  --LEFT
 <img src="https://user-images.githubusercontent.com/30151642/96210966-0c4c8680-0fae-11eb-86a3-cd6446bd352e.png" width="30%"></img>
 ```
 SELECT
-A.NAME, --A테이블의 NAME조회
-B.AGE --B테이블의 AGE조회
+      A.NAME, --A테이블의 NAME조회
+      B.AGE --B테이블의 AGE조회
 FROM EX_TABLE A
 RIGHT OUTER JOIN JOIN_TABLE B ON A.NO_EMP = B.NO_EMP AND A.DEPT = B.DEPT; 
 ```
@@ -77,8 +77,8 @@ RIGHT OUTER JOIN JOIN_TABLE B ON A.NO_EMP = B.NO_EMP AND A.DEPT = B.DEPT;
 <img src="https://user-images.githubusercontent.com/30151642/96211107-677e7900-0fae-11eb-8c71-89a0d3252f7d.png" width="30%"></img>
 ```
 SELECT
-A.NAME, --A테이블의 NAME조회
-B.AGE --B테이블의 AGE조회
+      A.NAME, --A테이블의 NAME조회
+      B.AGE --B테이블의 AGE조회
 FROM EX_TABLE A --기준테이블 별칭
 FULL OUTER JOIN JOIN_TABLE B ON A.NO_EMP = B.NO_EMP AND A.DEPT = B.DEPT; --FULL OUTER JOIN 조인테이블 별칭 ON 기준테이블별칭.기준키 = 조인테이블별칭.기준키 .....
 ```
@@ -90,16 +90,16 @@ FULL OUTER JOIN JOIN_TABLE B ON A.NO_EMP = B.NO_EMP AND A.DEPT = B.DEPT; --FULL 
 #### CROSS JOIN 구현 방식 1
 ```
 SELECT
-테이블별칭.조회할칼럼,
-테이블별칭.조회할칼럼
+      테이블별칭.조회할칼럼,
+      테이블별칭.조회할칼럼
 FROM 기준테이블 별칭
 CROSS JOIN 조인테이블 별칭; 
 ```
 #### CROSS JOIN 구현 방식 2
 ```
 SELECT
-테이블별칭.조회할칼럼,
-테이블별칭.조회할칼럼
+      테이블별칭.조회할칼럼,
+      테이블별칭.조회할칼럼
 FROM 기준테이블 별칭,조인테이블 별칭; 
 ```
 ###  SELF JOIN
