@@ -137,3 +137,16 @@ SELECT E1.EMPNO AS 사원
     ON E1.MGR = E2.EMPNO
  ORDER BY E2.MGR DESC, E1.MGR, E1.EMPNO;   
 ```
+
+# 기타 함수
+### TIMEDIFF(날짜1, 날짜2); 
+```
+SELECT DATEDIFF('2018-03-28 23:59:59', '2017-03-01 00:00:00');
+```
+[TIMEDIFF 사용 코드](https://github.com/Zeusl/SQL/blob/main/%EC%98%A4%EB%9E%9C%20%EA%B8%B0%EA%B0%84%20%EB%B3%B4%ED%98%B8%ED%95%9C%20%EB%8F%99%EB%AC%BC(2).sql)
+
+### TIMESTAMPDIFF(단위, 날짜1, 날짜2);
+- 단위( SECOND : 초, MINUTE : 분, HOUR : 시, DAY : 일, WEEK : 주, MONTH : 월, QUARTER : 분기, YEAR : 년)
+```
+SELECT TIMESTAMPDIFF(SECOND, '2017-03-01 00:00:00', '2018-03-28 00:00:00');
+```
